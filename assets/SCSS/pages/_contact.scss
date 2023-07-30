@@ -1,0 +1,133 @@
+.contact{
+    background-image: url(https://junotoys.themerex.net/wp-content/uploads/2021/09/bg-shape.png);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #f6f4f7;
+}
+.contact-form {
+    padding-top: 74px;
+    h3 {
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 700;
+        font-style: normal;
+        text-transform: uppercase;
+        letter-spacing: 0.13em;
+    }
+    h1 {
+        font-weight: 700;        
+    }
+    input {
+        padding: 12px 45px;
+        line-height: 1.5em;
+        border: 1px solid #d9dee3;
+        border-radius: 25px;
+        margin: 10px 0;
+    }
+}
+.message-input{
+    textarea{
+        padding-left: 40px;
+        margin: 10px 0;
+        overflow: auto;
+        width: 100%;
+        height: 150px;
+        padding: 12px 12px;
+        line-height: 1.5em;
+
+        border: 1px solid #d9dee3;
+        border-radius: 12px;
+        background-color: #f8f8f8;
+        font-size: 20px;
+        resize:vertical;
+    }
+}
+//Map
+.mapouter {
+    position: relative;
+    text-align: right;
+    width: 100%;
+    height: 400px;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    width: 100%;
+    height: 400px;
+}
+
+.gmap_iframe {
+    height: 400px !important;
+}
+.question-button{
+    display: flex;
+    justify-content: end;
+    button{
+        padding: 15px 50px;
+        cursor: pointer;
+        background-color: #12aada;
+        font-family: Quicksand,sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        font-style: normal;
+        line-height: 21px;
+        border-radius: 30px;
+        color: #f8f8f8;
+    }
+}
+//adress
+#mail-address{
+    padding: 40px 0;
+    background-color: #f6f4f7;
+    font-size: 1.1em;
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    i{
+        color: #181d4e;
+    }
+}
+.adress-mail-network{
+    display: flex;
+    justify-content: space-evenly;
+}
+.network{
+    ul{
+        display: flex;
+        li{
+            i{
+                margin-left: 5px;
+                border: 1px solid black;
+                padding: 8px;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+@media screen and (max-width:1200px) {
+    .contact{
+        background: none;
+    }
+    .contact-img{
+        img{
+            display: none;
+        }
+    }
+    .contact-form {
+        padding: 40px 0;
+        input{
+            width: 100%;
+        }
+    }
+    #mail-address{
+        text-align: center;
+        .network{
+            display: flex;
+            justify-content: center;
+        }    
+    }
+}
+

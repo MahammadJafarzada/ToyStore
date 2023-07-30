@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+ }
+ body{
+     font-size: 14px;
+     font-weight: 400;
+     font-family: 'Montserrat', sans-serif;
+     font-family: 'Quicksand', sans-serif;
+     font-family: 'Roboto', sans-serif;
+}
+ html{
+     scroll-behavior: smooth;
+ }
+ 
+ ul {
+     list-style: none;
+ }
+ 
+ li {
+     list-style: none;
+ }
+ 
+ a {
+     text-decoration: none;
+ }
