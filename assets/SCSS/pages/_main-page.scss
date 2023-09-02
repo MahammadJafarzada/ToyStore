@@ -14,18 +14,18 @@
     flex-direction: column;
     color: white;
     text-align: center;
-    .shop-title{
+    .discover--shop-title{
         h2{
             font-size: 95px;
             font-weight: 600;
         }
     }
-    .shop-description{
+    .discover--shop-description{
         p{
             font-size: 25px;
         }
     }
-    .shop-button{
+    .discover--shop-button{
         button{
             background-color: #12AEE0;
             border-radius: 25px;
@@ -120,6 +120,7 @@
     line-height: 1.2em; 
     position: relative; 
     float: left; 
+    cursor: pointer;
     overflow: hidden; 
     margin: 10px 1%; 
 }
