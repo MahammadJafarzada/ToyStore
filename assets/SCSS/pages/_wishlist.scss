@@ -1,0 +1,14 @@
+#wishlist{
+    background-color: #f5f6f7;
+}
+.wishlist-table{
+    display: flex;
+    justify-content: space-between;
+}
+.wishlist--table-description{
+    display: flex;
+    justify-content: space-between;
+    img{
+        width: 30%;
+    }
+}
