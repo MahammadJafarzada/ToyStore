@@ -1308,15 +1308,10 @@ input[type=range]::-moz-range-thumb {
   background-color: #f5f6f7;
 }
 
-.wishlist-table {
-  display: flex;
-  justify-content: space-between;
+.product-title--price input {
+  border-radius: 8px;
+  padding: 4px;
 }
-
-.wishlist--table-description {
-  display: flex;
-  justify-content: space-between;
-}
-.wishlist--table-description img {
-  width: 30%;
+.product-title--price i {
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
