@@ -63,34 +63,35 @@
         </div>
     </header>
     <!-- Header End -->
-    <section id="wishlist">
+    <section id="products">
         <div class="container">
             <div class="row">
-                <div class="shop col-12 col-lg-12 col-md-12 col-xs-12">
-                    <div class="shop-title">
-                        <h1>Wishlist</h1>
-                        <i class="fa-solid fa-angle-down"></i>
+                <div class="product-views">
+                    <div class="product--view-img col-lg-6">
+                        <img src="./assets/Img/product3-copyright-630x630.jpg" alt="toy-view">
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="shop-products col-lg-8 col-md-12">
-                    <div class="product col-lg-4 col-md-6 col-s-12">
-                        <span><i class="fa-solid fa-trash"></i></span>
-                        <div class="product-img">
-                        <img src="./assets/Img/product10-copyright.jpg" alt="">
-                        <div class="overlay">
-                            <a href="product.html"><i class="fa-solid fa-arrow-right"></i></a>
+                    <div class="product--view-description col-lg-6">
+                        <div class="product--view-title">
+                            <h2>Barbie house toy</h2>
                         </div>
-                    </div>
-                    <div class="product-title--price">
-                        <p><a href="#">Teddy bear toy</a></p>
-                        <p>22 <span>$</span></p>
-                    </div>
+                        <div class="product--view-price">
+                            <h4>50$</h4>
+                        </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem debitis culpa reprehenderit,</p>
+                            <div class="counter">
+                                <span class="down" onClick='decreaseCount(event, this)'>-</span>
+                                <input type="text" value="1">
+                                <span class="up" onClick='increaseCount(event, this)'>+</span>
+                              </div>
+                            <div class="add-wishlist">
+                                <button type="submit">
+                                    Add To Wishlist
+                                </button>
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>
-    </div>
     </section>
     <!-- footer start -->
     <footer>
@@ -115,6 +116,7 @@
     </footer>
     <!-- footer end -->
     <script src="./JS/main.js"></script>
+    <script src="./JS/counter.js"></script>
     <script src="./JS/mobile-navbar.js"></script>
     <script src="./JS/price-range.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
