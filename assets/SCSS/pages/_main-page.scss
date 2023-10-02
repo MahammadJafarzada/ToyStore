@@ -297,11 +297,11 @@ transform: translateX(-100%);
     }
     .futures-icon{
         i{
-            color: #181d4e;
+            background-color: #fff;
             padding: 8px;
             font-size: 3em;
-           
         }
+       
     }
     .futures-description{
         padding-left: 8px;
@@ -334,5 +334,12 @@ transform: translateX(-100%);
     }
     .categories{
         padding: 20px 10px;
+    }
+    .categories-title{
+        margin: 10px;
+    }
+    .categories-title h3{
+        font-size: 2.5em;
+        font-weight: 500;
     }
 }

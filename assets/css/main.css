@@ -303,6 +303,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  border: none !important;
+}
+
 .footer {
   background-color: #182352;
 }
@@ -799,7 +803,7 @@ a {
   padding: 10px 0;
 }
 .futures .futures-icon i {
-  color: #181d4e;
+  background-color: #fff;
   padding: 8px;
   font-size: 3em;
 }
@@ -830,6 +834,13 @@ a {
   }
   .categories {
     padding: 20px 10px;
+  }
+  .categories-title {
+    margin: 10px;
+  }
+  .categories-title h3 {
+    font-size: 2.5em;
+    font-weight: 500;
   }
 }
 .contact {
@@ -1169,141 +1180,6 @@ input[type=range]::-moz-range-thumb {
   color: #12AEE0;
 }
 
-.register-center {
-  justify-content: center;
-}
-
-.register {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  padding: 31px 0;
-}
-.register label {
-  display: block;
-  margin: 10px 0;
-}
-.register input {
-  padding: 12px 22px;
-  width: 100%;
-  background-color: #f8f8f8;
-  border: 1px solid #12AEE0;
-  border-radius: 12px;
-}
-
-.lost-password a {
-  text-decoration: none;
-  color: black;
-}
-
-.btn-register {
-  padding-top: 10px;
-}
-
-.register-button {
-  background-color: #12AEE0;
-  border-radius: 25px;
-  color: white;
-  font-size: 18px;
-  font-weight: 600;
-  padding: 15px 30px;
-  cursor: pointer;
-  border: none;
-  transition: all 0.8s;
-}
-.register-button:hover {
-  outline: 2px dashed #12AEE0;
-  opacity: 0.8;
-  background-color: white;
-  color: #12AEE0;
-}
-
-.login-center {
-  justify-content: center;
-}
-
-.login {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  padding: 31px 0;
-}
-.login label {
-  display: block;
-  margin: 10px 0;
-}
-.login input {
-  padding: 12px 22px;
-  width: 100%;
-  background-color: #f8f8f8;
-  border: 1px solid #12AEE0;
-  border-radius: 12px;
-}
-
-.lost-password a {
-  text-decoration: none;
-  color: black;
-}
-
-.btn-login {
-  padding-top: 10px;
-}
-
-.login-button {
-  background-color: #12AEE0;
-  border-radius: 25px;
-  color: white;
-  font-size: 18px;
-  font-weight: 600;
-  padding: 15px 30px;
-  cursor: pointer;
-  border: none;
-  transition: all 0.8s;
-}
-.login-button:hover {
-  outline: 2px dashed #12AEE0;
-  opacity: 0.8;
-  background-color: white;
-  color: #12AEE0;
-}
-
-.forgot-password {
-  padding: 85px 0;
-}
-.forgot-password input {
-  padding: 12px 22px;
-  width: 100%;
-  background-color: #f8f8f8;
-  border: 1px solid #12AEE0;
-  border-radius: 12px;
-}
-
-.btn-forgot {
-  display: flex;
-  justify-content: end;
-  padding: 10px 0;
-}
-
-.forgot-button {
-  background-color: #12AEE0;
-  border-radius: 25px;
-  color: white;
-  font-size: 18px;
-  font-weight: 600;
-  padding: 15px 30px;
-  cursor: pointer;
-  border: none;
-  transition: all 0.8s;
-}
-.forgot-button:hover {
-  outline: 2px dashed #12AEE0;
-  opacity: 0.8;
-  background-color: white;
-  color: #12AEE0;
-}
-
 #wishlist {
   background-color: #f5f6f7;
 }
@@ -1329,6 +1205,49 @@ input[type=range]::-moz-range-thumb {
   opacity: 0.7;
 }
 
+.wish-imag {
+  background-color: #f5f6f7;
+  display: flex;
+  justify-content: center;
+}
+.wish-imag h3 {
+  font-weight: 600;
+  font-size: 2em;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+.wish-imag img {
+  height: 100%;
+  width: 100%;
+}
+.wish-imag .back-shop {
+  background-color: #12AEE0;
+  border-radius: 25px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 15px 30px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.8s;
+}
+.wish-imag .back-shop:hover {
+  outline: 2px dashed #12AEE0;
+  opacity: 0.8;
+  background-color: white;
+  color: #12AEE0;
+}
+
+@media screen and (max-width: 992px) {
+  .wish-imag {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .wish-imag .wish-title {
+    text-align: center;
+    padding: 10px 0;
+  }
+}
 #product {
   background-color: #f5f6f7;
 }

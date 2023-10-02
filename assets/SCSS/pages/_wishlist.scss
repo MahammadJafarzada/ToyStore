@@ -24,3 +24,47 @@
         }
     }
 }
+.wish-imag{
+    background-color: #f5f6f7;
+    display: flex;
+    justify-content: center;
+    h3{
+        font-weight: 600;
+        font-size: 2em;
+        letter-spacing: 2px;    
+        margin-bottom: 20px;
+    }
+    img{
+        height: 100%;
+        width: 100%;
+
+    }
+    .back-shop{
+            background-color: #12AEE0;
+            border-radius: 25px;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            padding:15px 30px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.8s;
+            &:hover{
+                outline: 2px dashed #12AEE0;
+                opacity: 0.8;
+                background-color: white;
+                color: #12AEE0;
+        }
+    }
+}
+@media screen and (max-width:992px) {
+    .wish-imag{
+        display: flex;
+        flex-direction: column-reverse;
+        .wish-title{
+            text-align: center;
+            padding: 10px 0;
+        }
+    }
+
+}
