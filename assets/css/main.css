@@ -1205,6 +1205,10 @@ input[type=range]::-moz-range-thumb {
   opacity: 0.7;
 }
 
+.delete-item i {
+  margin: 10px;
+}
+
 .wish-imag {
   background-color: #f5f6f7;
   display: flex;
@@ -1220,7 +1224,8 @@ input[type=range]::-moz-range-thumb {
   height: 100%;
   width: 100%;
 }
-.wish-imag .back-shop {
+.wish-imag .back-shop a {
+  text-decoration: none;
   background-color: #12AEE0;
   border-radius: 25px;
   color: white;
@@ -1231,7 +1236,7 @@ input[type=range]::-moz-range-thumb {
   border: none;
   transition: all 0.8s;
 }
-.wish-imag .back-shop:hover {
+.wish-imag .back-shop a:hover {
   outline: 2px dashed #12AEE0;
   opacity: 0.8;
   background-color: white;

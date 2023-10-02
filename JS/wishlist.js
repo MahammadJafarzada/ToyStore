@@ -42,24 +42,26 @@ function WishlistView() {
     if (products.length === 0) {
         // Wishlist is empty, display a placeholder message or image
         wishlistViewItem.innerHTML = `
-                <div class="wish-imag">
-                    <div class="wish-title ">
-                        <h3>
-                            Your wishlist empty 
-                        </h3>
-                        <button class="back-shop">Back to Shopping</button>
-                    </div>
-                    <div class="wish-img ">
-                        <img src="./assets/Img/closeup-empty-trolley-ready-christmas-shopping-purple-background__1_-removebg-preview.png" alt="">
-                    </div>
-                </div>`;
+        <div class="wish-imag">
+        <div class="wish-title ">
+            <h3>
+                Your wishlist empty 
+            </h3>
+            <button class="back-shop"><a href="./shop.html">
+                Back to Shopping</button>
+            </a>
+        </div>
+        <div class="wish-img ">
+            <img src="./assets/Img/closeup-empty-trolley-ready-christmas-shopping-purple-background__1_-removebg-preview.png" alt="">
+        </div>
+    </div>`;
     } else{
 
         
         for (let i = 0; i < products.length; i++) {
         const { Img, Id, Price, Title } = products[i];
         wishlistViewItem.innerHTML += `
-        <div class="product col-lg-4 col-md-6 col-s-12">
+        <div class="product col-lg-3 col-md-4 col-s-12">
             <span class="delete-item" onclick="removeFromWishlist(${i})"><i class="fa-solid fa-trash"></i></span>
             <div class="product-img">
                 <img src=${Img} alt="">
@@ -68,7 +70,7 @@ function WishlistView() {
                     </div>
                     </div>
                     <div class="product-title--price">
-                    <p><a href="#">${Title}</a></p>
+                    <p><a href="product.html">${Title}</a></p>
                     <p>${Price} <span>$</span></p>
             </div>
         </div>
