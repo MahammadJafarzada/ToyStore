@@ -1247,6 +1247,70 @@ input[type=range]::-moz-range-thumb {
   color: #12AEE0;
 }
 
+.wp--tg-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+.wp--tg-title h2 {
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 2.5em;
+  color: #181d4e;
+  font-weight: 600;
+}
+.wp--tg-title .wp--telegram-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  padding: 25px 0;
+}
+.wp--tg-title .wp--telegram-button .wp-btn button {
+  padding-left: 8px;
+}
+.wp--tg-title .wp--telegram-button .wp-btn button a {
+  text-decoration: none;
+  background-color: #12AEE0;
+  border-radius: 25px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.8s;
+}
+.wp--tg-title .wp--telegram-button .wp-btn button a:hover {
+  outline: 2px dashed #12AEE0;
+  opacity: 0.8;
+  background-color: white;
+  color: #12AEE0;
+}
+.wp--tg-title .wp--telegram-button .tg-btn button {
+  padding-left: 8px;
+}
+.wp--tg-title .wp--telegram-button .tg-btn button a {
+  text-decoration: none;
+  background-color: #12AEE0;
+  border-radius: 25px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.8s;
+}
+.wp--tg-title .wp--telegram-button .tg-btn button a:hover {
+  outline: 2px dashed #12AEE0;
+  opacity: 0.8;
+  background-color: white;
+  color: #12AEE0;
+}
+
 @media screen and (max-width: 992px) {
   .wish-imag {
     display: flex;

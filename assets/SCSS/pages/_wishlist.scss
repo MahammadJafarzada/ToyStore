@@ -65,6 +65,67 @@
     }
     }
 }
+.wp--tg-title{
+   @include flex();
+    flex-direction: column;
+        h2{
+            letter-spacing: 2px;
+            text-align: center;
+            font-size: 2.5em;
+            color: #181d4e;
+            font-weight: 600;
+        }
+    .wp--telegram-button{
+        @include flex();
+        padding: 25px 0;
+        .wp-btn{
+            button{
+                padding-left: 8px;
+                a{
+                    text-decoration: none;
+                    background-color: #12AEE0;
+                    border-radius: 25px;
+                    color: white;
+                    font-size: 18px;
+                    font-weight: 600;
+                    padding:10px 15px;
+                    cursor: pointer;
+                    border: none;
+                    transition: all 0.8s;
+                &:hover{
+                    outline: 2px dashed #12AEE0;
+                    opacity: 0.8;
+                    background-color: white;
+                    color: #12AEE0;
+                }
+            }
+        }
+    }
+    .tg-btn{
+    button{
+        padding-left: 8px;
+        a{
+            text-decoration: none;
+            background-color: #12AEE0;
+            border-radius: 25px;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            padding:10px 15px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.8s;
+            &:hover{
+                outline: 2px dashed #12AEE0;
+                opacity: 0.8;
+                background-color: white;
+                color: #12AEE0;
+            }
+        }
+    }
+}
+}
+}
 @media screen and (max-width:992px) {
     .wish-imag{
         display: flex;

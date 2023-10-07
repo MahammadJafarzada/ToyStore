@@ -48,7 +48,7 @@ function WishlistView() {
                     <img src="./assets/Img/closeup-empty-trolley-ready-christmas-shopping-purple-background__1_-removebg-preview.png" alt="">
                 </div>
             </div>`;
-    } else {
+    } else if (products.length > 0) {
         for (let i = 0; i < products.length; i++) {
             const { Img, Id, Price, Title } = products[i];
             wishlistViewItem.innerHTML += `
@@ -67,6 +67,20 @@ function WishlistView() {
                 </div>
             `;
         }
+        wishlistViewItem.innerHTML +=`<div class="col-12 col-lg-12 col-md-12 col-xs-12">
+        <div class="wp--tg-title">
+            <h2>Do you want to order it? Let's send us link from there </h2>
+            <div class="wp--telegram-button">
+                <div class="wp-btn">
+                    <button><a href="#">Whatsapp</a></button>
+                </div>
+                <div class="tg-btn">
+                    <button><a href="#">Telegram</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    `
     }
 }
 
