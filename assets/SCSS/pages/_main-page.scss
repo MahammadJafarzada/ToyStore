@@ -328,10 +328,10 @@ transform: translateX(-100%);
 }
 
 @media screen and (max-width:992px){
-    .about-info{
-        padding: 20px 0;
+    .discover-title{
+        @include flex();
     }
-    .product{
+    .about-info{
         padding: 20px 0;
     }
     .categories{

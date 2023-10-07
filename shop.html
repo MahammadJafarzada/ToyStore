@@ -70,8 +70,8 @@
             </div>
             <div class="row">
                 <div class="shop--product-filter col-12 col-md-12">
-                    <div class="shop-products col-lg-8 col-md-12">
-                        <div id="1" class="product col-lg-4 col-md-6 col-s-12" >
+                    <div class="shop-products col-lg-8 col-md-12" id="product-container">
+                        <div id="1" class="product col-lg-4 col-md-6 col-s-12" data-filter="BathToys" >
                             <div class="product-img">
                                 <img src="./assets/Img/product3-copyright-630x630.jpg" alt="">
                                 <div class="overlay">
@@ -86,7 +86,7 @@
                                 <span>$</span><span>22</span>
                             </div>
                         </div>
-                        <div id="2" class="product col-lg-4 col-md-6 col-s-12">
+                        <div id="2" class="product col-lg-4 col-md-6 col-s-12" data-filter="Electronic">
                             <div class="product-img">
                                 <img src="./assets/Img/product10-copyright.jpg" alt="">
                                 <div class="overlay">
@@ -99,7 +99,7 @@
                                 <span>$</span><span>22</span>
                             </div>
                         </div>
-                        <div id="3" class="product col-lg-4 col-md-6 col-s-12">
+                        <div id="3" class="product col-lg-4 col-md-6 col-s-12" data-filter="Electronic">
                             <div class="product-img">
                                 <img src="./assets/Img/product10-copyright.jpg" alt="">
                                 <div class="overlay">
@@ -112,7 +112,7 @@
                                 <span>$</span><span>22</span>
                             </div>
                         </div>
-                        <div id="4" class="product col-lg-4 col-md-6 col-s-12">
+                        <div id="4" class="product col-lg-4 col-md-6 col-s-12" data-filter="FiguresPlay">
                             <div class="product-img">
                                 <img src="./assets/Img/product10-copyright.jpg" alt="">
                                 <div class="overlay">
@@ -125,7 +125,7 @@
                                 <span>$</span><span>22</span>
                             </div>
                         </div>
-                        <div id='5'class="product col-lg-4 col-md-6 col-s-12">
+                        <div id='5'class="product col-lg-4 col-md-6 col-s-12" data-filter="Electronic">
                             <div class="product-img">
                                 <img src="./assets/Img/product10-copyright.jpg" alt="">
                                 <div class="overlay">
@@ -138,7 +138,7 @@
                                 <span>$</span><span>22</span>
                             </div>
                         </div>
-                        <div id='6'class="product col-lg-4 col-md-6 col-s-12">
+                        <div id='6'class="product col-lg-4 col-md-6 col-s-12" data-filter="BathToys">
                             <div class="product-img">
                                 <img src="./assets/Img/product10-copyright.jpg" alt="">
                                 <div class="overlay">
@@ -151,7 +151,7 @@
                                 <span>$</span><span>22</span>
                             </div>
                         </div>
-                        <div id='7'class="product col-lg-4 col-md-6 col-s-12">
+                        <div id='7'class="product col-lg-4 col-md-6 col-s-12" data-filter="Learning">
                             <div class="product-img">
                                 <img src="./assets/Img/product10-copyright.jpg" alt="">
                                 <div class="overlay">
@@ -164,7 +164,7 @@
                                 <span>$</span><span>22</span>
                             </div>
                         </div>
-                        <div id='8'class="product col-lg-4 col-md-6 col-s-12">
+                        <div id='8'class="product col-lg-4 col-md-6 col-s-12" data-filter="Learning">
                             <div class="product-img">
                                 <img src="./assets/Img/product10-copyright.jpg" alt="">
                                 <div class="overlay">
@@ -177,7 +177,7 @@
                                 <span>$</span><span>22</span>
                             </div>
                         </div>
-                          <div id='9'class="product col-lg-4 col-md-6 col-s-12">
+                          <div id='9'class="product col-lg-4 col-md-6 col-s-12" data-filter="FiguresPlay">
                             <div class="product-img">
                                 <img src="./assets/Img/product10-copyright.jpg" alt="">
                                 <div class="overlay">
@@ -199,7 +199,8 @@
                     <div class="shop-filter col-lg-4 col-md-12">
                         <div class="shop-categories">
                             <h2>Categories</h2>
-                            <ul class="my-list">
+                            <ul class="my-list" id="category-filter">
+                                <li data-filter="all"><a href="#">All</a></li>
                                 <li data-filter="BathToys"><a href="#">Bath Toys</a></li>
                                 <li data-filter="Electronic"><a href="#">Electronic</a></li>
                                 <li data-filter="FiguresPlay"><a href="#">Figures Play</a></li>
@@ -280,7 +281,7 @@
         <script src="./JS/main.js"></script>
         <script src="./JS/mobile-navbar.js"></script>
         <script src="./JS/price-range.js"></script>
-        <script src="./JS/filter.js"></script>
+        <script src="./JS/filterCategory.js"></script>
         <script src="./JS/wishlist.js"></script>
 </body>
 

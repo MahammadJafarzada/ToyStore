@@ -421,7 +421,7 @@ button {
   position: absolute;
   display: none;
   padding-top: 20px;
-  top: 11%;
+  top: 20%;
   visibility: visible;
   opacity: 1;
   transition: all 0.5s ease-in-out;
@@ -827,10 +827,13 @@ button {
 }
 
 @media screen and (max-width: 992px) {
-  .about-info {
-    padding: 20px 0;
+  .discover-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
   }
-  .product {
+  .about-info {
     padding: 20px 0;
   }
   .categories {
@@ -1144,7 +1147,7 @@ input[type=range]::-moz-range-thumb {
   }
   .shop--product-filter {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .shop-filter {
     text-align: center;
@@ -1251,7 +1254,7 @@ input[type=range]::-moz-range-thumb {
   }
   .wish-imag .wish-title {
     text-align: center;
-    padding: 10px 0;
+    padding: 25px 0;
   }
 }
 #product {
