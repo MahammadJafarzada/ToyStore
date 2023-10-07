@@ -405,6 +405,31 @@ button {
   font-size: 20px;
 }
 
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #181d4E;
+}
+
+/* underline */
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #181d4E;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
 .navbar-mobile {
   z-index: 333;
   position: absolute;

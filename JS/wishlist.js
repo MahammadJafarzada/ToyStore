@@ -2,6 +2,7 @@ let wishlistbtns = document.querySelectorAll(".wishlist");
 let wishlistViewItem = document.getElementById("Wishlist-items");
 let products = JSON.parse(localStorage.getItem("products")) || [];
 
+
 function removeFromWishlist(index) {
     products.splice(index, 1);
     localStorage.setItem("products", JSON.stringify(products));
