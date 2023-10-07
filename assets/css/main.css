@@ -421,7 +421,7 @@ button {
   position: absolute;
   display: none;
   padding-top: 20px;
-  top: 20%;
+  top: 11%;
   visibility: visible;
   opacity: 1;
   transition: all 0.5s ease-in-out;
