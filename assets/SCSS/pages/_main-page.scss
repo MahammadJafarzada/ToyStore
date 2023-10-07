@@ -144,6 +144,7 @@
 .product-img img { 
     max-width: 100%; 
     width: 100%; 
+    height: 300px;
     vertical-align: top; 
 }
 .product-img .overlay { 
@@ -161,6 +162,7 @@
     opacity: 0; 
     text-decoration: none;
 }
+
 .product-img a i { 
     display: block; 
     line-height: 40px; 
