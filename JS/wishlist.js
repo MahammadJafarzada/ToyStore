@@ -1,3 +1,6 @@
+console.log(1);
+
+
 let wishlistbtns = document.querySelectorAll(".wishlist");
 let wishlistViewItem = document.getElementById("Wishlist-items");
 let products = JSON.parse(localStorage.getItem("products")) || [];
@@ -15,24 +18,44 @@ for (let wishlistbtn of wishlistbtns) {
 
         let id = this.parentElement.parentElement.parentElement.parentElement.getAttribute("id");
         let isAlreadyInWishlist = products.some(product => product.Id === id);
-
-        if (!isAlreadyInWishlist) {
-            let img = this.parentElement.parentElement.previousElementSibling.src;
-            let price = this.parentElement.parentElement.parentElement.nextElementSibling.children[2].innerHTML;
-            let title = this.parentElement.parentElement.parentElement.nextElementSibling.children[0].children[0].innerHTML;
-
-            let product = {
-                Id: id,
-                Img: img,
-                Price: price,
-                Title: title
-            };
-            products.push(product);
-
-            localStorage.setItem("products", JSON.stringify(products));
-
-            WishlistView();
+        try {
+            if (!isAlreadyInWishlist) {
+                let img = this.parentElement.parentElement.previousElementSibling.src;
+                let price = this.parentElement.parentElement.parentElement.nextElementSibling.children[2].innerHTML;
+                let title = this.parentElement.parentElement.parentElement.nextElementSibling.children[0].children[0].innerHTML;
+    
+                let product = {
+                    Id: id,
+                    Img: img,
+                    Price: price,
+                    Title: title
+                };
+                products.push(product);
+    
+                localStorage.setItem("products", JSON.stringify(products));
+    
+                WishlistView();
+            }
+        } catch (error) {
+            if (!isAlreadyInWishlist) {
+                 let img = this.parentElement.parentElement.previousElementSibling.children[0].src;
+                 let price = this.parentElement.previousElementSibling.previousElementSibling.children[0].children[0].innerHTML;
+                let title = this.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.children[0].innerHTML;
+                console.log(price);
+                let product = {
+                    Id: id,
+                    Img: img,
+                    Price: price,
+                    Title: title
+                };
+                products.push(product);
+    
+                localStorage.setItem("products", JSON.stringify(products));
+    
+                WishlistView();
+            }
         }
+       
     };
 }
 
