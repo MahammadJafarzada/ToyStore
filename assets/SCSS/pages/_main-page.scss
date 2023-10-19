@@ -84,6 +84,7 @@
     .product-img{
         img{
             width: 100%;
+            height: 350px;
             cursor: pointer;
             border-radius: 15px;
         }
@@ -234,6 +235,7 @@ transform: translateX(-100%);
         opacity: 0.9;
     }
         img{
+            height: 250px;
             width: 100%;
             border-radius: 15px;
         }
