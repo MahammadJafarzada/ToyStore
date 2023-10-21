@@ -1,6 +1,3 @@
-console.log(1);
-
-
 let wishlistbtns = document.querySelectorAll(".wishlist");
 let wishlistViewItem = document.getElementById("Wishlist-items");
 let products = JSON.parse(localStorage.getItem("products")) || [];

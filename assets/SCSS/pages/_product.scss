@@ -2,7 +2,7 @@
     background-color: #f5f6f7;
 }
 .product-view{
-    padding: 20px 0;
+    padding: 70px 0;
 }
 .product--view-img{ 
     img{
@@ -16,35 +16,6 @@
     h4{
         color: #12AEE0;
     }
-}
-.counter{
-    padding: 10px 0;
-
-}
-.counter {
-    margin: auto;
-    display: flex;
-    justify-content: left;
-}
-.counter input {
-    cursor: pointer;
-    width: 50px;
-    border: 0;
-    line-height: 30px;
-    font-size: 20px;
-    text-align: center;
-    background: #f5f6f7;
-    color: #12AEE0;
-    appearance: none;
-    outline: 0;
-}
-.counter span {
-    display: block;
-    font-size: 25px;
-    padding: 0 10px;
-    cursor: pointer;
-    color: #12AEE0;
-    user-select: none;
 }
 .add-wishlist{
     padding: 10px 0;
