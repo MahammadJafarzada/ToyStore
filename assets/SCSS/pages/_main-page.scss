@@ -227,7 +227,7 @@ transform: translateX(-100%);
 }
 .categories{
     position: relative;
-    display: flex;
+    @include flex();
     cursor: pointer;
     transition: 0.8s;
     &:hover{
