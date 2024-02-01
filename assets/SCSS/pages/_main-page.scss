@@ -36,6 +36,7 @@
             cursor: pointer;
             border: none;
             transition: all 0.8s;
+          
             &:hover{
                 opacity: 0.8;
                 background-color: white;
@@ -43,6 +44,12 @@
             }
         }
     }
+}
+
+.active-wish{
+    color: red !important;
+    font-size: 90px;
+    // background-color: red !important;
 }
 .btn:link,
 .btn:visited{

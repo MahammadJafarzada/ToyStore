@@ -6,13 +6,26 @@ let products = JSON.parse(localStorage.getItem("products")) || [];
 function removeFromWishlist(index) {
     products.splice(index, 1);
     localStorage.setItem("products", JSON.stringify(products));
+    Toastify({
+        text: "Product deleted",
+        duration: 1000,
+        newWindow: true,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "#12AEE0",
+        },
+        onClick: function(){} // Callback after click
+      }).showToast();
     WishlistView();
+    
 }
 
 for (let wishlistbtn of wishlistbtns) {
     wishlistbtn.onclick = function (e) {
         e.preventDefault();
-
         let id = this.parentElement.parentElement.parentElement.parentElement.getAttribute("id");
         let isAlreadyInWishlist = products.some(product => product.Id === id);
         try {
@@ -30,8 +43,37 @@ for (let wishlistbtn of wishlistbtns) {
                 products.push(product);
     
                 localStorage.setItem("products", JSON.stringify(products));
-    
-                WishlistView();
+                Toastify({
+                    text: "Product added",
+                    duration: 1000,
+                    newWindow: true,
+                    close: true,
+                    gravity: "top", // `top` or `bottom`
+                    position: "right", // `left`, `center` or `right`
+                    stopOnFocus: true, // Prevents dismissing of toast on hover
+                    style: {
+                      background: "#12AEE0",
+                    },
+                    onClick: function(){} // Callback after click
+                  }).showToast();
+
+               WishlistView();
+            }
+            else{
+                Toastify({
+                    text: "Already exist",
+                    duration: 3000,
+                    newWindow: true,
+                    close: true,
+                    gravity: "top", 
+                    position: "right", // `left`, `center` or `right`
+                    stopOnFocus: true, // Prevents dismissing of toast on hover
+                    style: {
+                      background: "#12AEE0",
+                    },
+                    onClick: function(){} // Callback after click
+                  }).showToast();
+
             }
         } catch (error) {
             if (!isAlreadyInWishlist) {
@@ -56,8 +98,10 @@ for (let wishlistbtn of wishlistbtns) {
     };
 }
 
+
 function WishlistView() {
     wishlistViewItem.innerHTML = "";
+    
     if (products.length === 0) {
         wishlistViewItem.innerHTML = `
             <div class="wish-imag">
@@ -70,6 +114,7 @@ function WishlistView() {
                 </div>
             </div>`;
     } else if (products.length > 0) {
+
         for (let i = 0; i < products.length; i++) {
             const { Img, Id, Price, Title } = products[i];
             wishlistViewItem.innerHTML += `
@@ -87,6 +132,7 @@ function WishlistView() {
                     </div>
                 </div>
             `;
+            
         }
         wishlistViewItem.innerHTML +=`<div class="col-12 col-lg-12 col-md-12 col-xs-12">
         <div class="wp--tg-title">

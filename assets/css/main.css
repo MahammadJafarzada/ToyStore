@@ -572,6 +572,11 @@ button {
   color: #12AEE0;
 }
 
+.active-wish {
+  color: red !important;
+  font-size: 90px;
+}
+
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
