@@ -7,7 +7,7 @@ function removeFromWishlist(index) {
     products.splice(index, 1);
     localStorage.setItem("products", JSON.stringify(products));
     Toastify({
-        text: "Product deleted",
+        text: "Товар удален",
         duration: 1000,
         newWindow: true,
         close: true,
@@ -44,7 +44,7 @@ for (let wishlistbtn of wishlistbtns) {
     
                 localStorage.setItem("products", JSON.stringify(products));
                 Toastify({
-                    text: "Product added",
+                    text: "Товар добавлен",
                     duration: 1000,
                     newWindow: true,
                     close: true,
@@ -61,17 +61,17 @@ for (let wishlistbtn of wishlistbtns) {
             }
             else{
                 Toastify({
-                    text: "Already exist",
+                    text: "Данный товар в Корзине",
                     duration: 3000,
                     newWindow: true,
                     close: true,
                     gravity: "top", 
-                    position: "right", // `left`, `center` or `right`
-                    stopOnFocus: true, // Prevents dismissing of toast on hover
+                    position: "right",
+                    stopOnFocus: true, 
                     style: {
                       background: "#12AEE0",
                     },
-                    onClick: function(){} // Callback after click
+                    onClick: function(){} 
                   }).showToast();
 
             }
@@ -106,11 +106,11 @@ function WishlistView() {
         wishlistViewItem.innerHTML = `
             <div class="wish-imag">
                 <div class="wish-title ">
-                    <h3>Your wishlist is empty</h3>
-                    <button class="back-shop"><a href="./shop.html">Back to Shopping</a></button>
+                    <h3>Ваш список желаний пуст</h3>
+                    <button class="back-shop"><a href="./shop.html">Вернутся к просмотру товаров</a></button>
                 </div>
                 <div class="wish-img ">
-                    <img src="./assets/Img/closeup-empty-trolley-ready-christmas-shopping-purple-background__1_-removebg-preview.png" alt="">
+                    <img src="./assets/Img/closeup-empty-trolley-ready-christmas-shopping-purple-background__1_-removebg-preview.png" alt="product">
                 </div>
             </div>`;
     } else if (products.length > 0) {
@@ -136,7 +136,7 @@ function WishlistView() {
         }
         wishlistViewItem.innerHTML +=`<div class="col-12 col-lg-12 col-md-12 col-xs-12">
         <div class="wp--tg-title">
-            <h2>Do you want to order it? Let's send us link from there </h2>
+            <h2>Хотите заказать? Отправьте нам ссылку товара на наши мессенджеры!</h2>
             <div class="wp--telegram-button">
                 <div class="wp-btn">
                     <button><a href="#">Whatsapp</a></button>
