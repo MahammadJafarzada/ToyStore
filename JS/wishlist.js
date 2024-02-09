@@ -5,7 +5,7 @@ let products = JSON.parse(localStorage.getItem("products")) || [];
 
 function removeFromWishlist(index) {
     products.splice(index, 1);
-    localStorage.setItem("products", JSON.stringify(products));
+    localStorage.removeItem("products", JSON.stringify(products));
     Toastify({
         text: "Товар удален",
         duration: 1000,
@@ -15,95 +15,121 @@ function removeFromWishlist(index) {
         position: "right", // `left`, `center` or `right`
         stopOnFocus: true, // Prevents dismissing of toast on hover
         style: {
-          background: "#12AEE0",
+            background: "#12AEE0",
         },
-        onClick: function(){} // Callback after click
-      }).showToast();
+        onClick: function () { } // Callback after click
+    }).showToast();
     WishlistView();
-    
+
 }
 
-for (let wishlistbtn of wishlistbtns) {
-    wishlistbtn.onclick = function (e) {
+// for (let wishlistbtn of wishlistbtns) {
+//     wishlistbtn.onclick = function (e) {
+//         e.preventDefault();
+//         let id = document.querySelector('.my-card').getAttribute("data-id");
+//         let isAlreadyInWishlist = products.every(product => product.Id === id);
+//         if (!isAlreadyInWishlist) {
+//             let img = document.querySelector(".my-card-img img").getAttribute("src");
+//             let price = document.querySelector('.my-card-price').getAttribute("data-price");
+//             let title = document.querySelector('.my-card-title').getAttribute("data-title");
+//             let product = {
+//                 Id: id,
+//                 Img: img,
+//                 Price: price,
+//                 Title: title
+//             };
+//             products.push(product);
+
+//             localStorage.setItem("products", JSON.stringify(products));
+//             Toastify({
+//                 text: "Товар добавлен",
+//                 duration: 1000,
+//                 newWindow: true,
+//                 close: true,
+//                 gravity: "top", // `top` or `bottom`
+//                 position: "right", // `left`, `center` or `right`
+//                 stopOnFocus: true, // Prevents dismissing of toast on hover
+//                 style: {
+//                     background: "#12AEE0",
+//                 },
+//                 onClick: function () { } // Callback after click
+//             }).showToast();
+
+//             WishlistView();
+//         }
+//         else {
+//             Toastify({
+//                 text: "Данный товар в Корзине",
+//                 duration: 3000,
+//                 newWindow: true,
+//                 close: true,
+//                 gravity: "top",
+//                 position: "right",
+//                 stopOnFocus: true,
+//                 style: {
+//                     background: "#12AEE0",
+//                 },
+//                 onClick: function () { }
+//             }).showToast();
+
+//         }
+//     };
+// }
+wishlistbtns.forEach((wishlistbtn) => {
+    wishlistbtn.addEventListener("click", (e) => {
         e.preventDefault();
-        let id = this.parentElement.parentElement.parentElement.parentElement.getAttribute("id");
+
+        let card = e.target.closest('.my-card');
+        let id = card.getAttribute("data-id");
+        let img = card.querySelector(".my-card-img img").getAttribute("src");
+        let price = card.querySelector('.my-card-price').getAttribute("data-price");
+        let title = card.querySelector('.my-card-title').getAttribute("data-title");
         let isAlreadyInWishlist = products.some(product => product.Id === id);
-        try {
-            if (!isAlreadyInWishlist) {
-                let img = this.parentElement.parentElement.previousElementSibling.src;
-                let price = this.parentElement.parentElement.parentElement.nextElementSibling.children[2].innerHTML;
-                let title = this.parentElement.parentElement.parentElement.nextElementSibling.children[0].children[0].innerHTML;
-    
-                let product = {
-                    Id: id,
-                    Img: img,
-                    Price: price,
-                    Title: title
-                };
-                products.push(product);
-    
-                localStorage.setItem("products", JSON.stringify(products));
-                Toastify({
-                    text: "Товар добавлен",
-                    duration: 1000,
-                    newWindow: true,
-                    close: true,
-                    gravity: "top", // `top` or `bottom`
-                    position: "right", // `left`, `center` or `right`
-                    stopOnFocus: true, // Prevents dismissing of toast on hover
-                    style: {
-                      background: "#12AEE0",
-                    },
-                    onClick: function(){} // Callback after click
-                  }).showToast();
 
-               WishlistView();
-            }
-            else{
-                Toastify({
-                    text: "Данный товар в Корзине",
-                    duration: 3000,
-                    newWindow: true,
-                    close: true,
-                    gravity: "top", 
-                    position: "right",
-                    stopOnFocus: true, 
-                    style: {
-                      background: "#12AEE0",
-                    },
-                    onClick: function(){} 
-                  }).showToast();
-
-            }
-        } catch (error) {
-            if (!isAlreadyInWishlist) {
-                 let img = this.parentElement.parentElement.previousElementSibling.children[0].src;
-                 let price = this.parentElement.previousElementSibling.previousElementSibling.children[0].children[0].innerHTML;
-                let title = this.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.children[0].innerHTML;
-                console.log(price);
-                let product = {
-                    Id: id,
-                    Img: img,
-                    Price: price,
-                    Title: title
-                };
-                products.push(product);
-    
-                localStorage.setItem("products", JSON.stringify(products));
-    
-                WishlistView();
-            }
+        if (!isAlreadyInWishlist) {
+            let product = {
+                Id: id,
+                Img: img,
+                Price: price,
+                Title: title
+            };
+            products.push(product);
+            localStorage.setItem("products", JSON.stringify(products));
+            Toastify({
+                text: "Товар добавлен",
+                duration: 1000,
+                newWindow: true,
+                close: true,
+                gravity: "top",
+                position: "right",
+                stopOnFocus: true,
+                style: {
+                    background: "#12AEE0",
+                },
+                onClick: function () { }
+            }).showToast();
+            WishlistView();
+        } else {
+            Toastify({
+                text: "Данный товар в Корзине",
+                duration: 3000,
+                newWindow: true,
+                close: true,
+                gravity: "top",
+                position: "right",
+                stopOnFocus: true,
+                style: {
+                    background: "#12AEE0",
+                },
+                onClick: function () { }
+            }).showToast();
         }
-       
-    };
-}
-
-
+    });
+});
 function WishlistView() {
     wishlistViewItem.innerHTML = "";
-    
     if (products.length === 0) {
-        wishlistViewItem.innerHTML = `
+        wishlistViewItem.innerHTML += `
             <div class="wish-imag">
                 <div class="wish-title ">
                     <h3>Ваш список желаний пуст</h3>
@@ -114,7 +140,6 @@ function WishlistView() {
                 </div>
             </div>`;
     } else if (products.length > 0) {
-
         for (let i = 0; i < products.length; i++) {
             const { Img, Id, Price, Title } = products[i];
             wishlistViewItem.innerHTML += `
@@ -132,9 +157,8 @@ function WishlistView() {
                     </div>
                 </div>
             `;
-            
         }
-        wishlistViewItem.innerHTML +=`<div class="col-12 col-lg-12 col-md-12 col-xs-12">
+        wishlistViewItem.innerHTML += `<div class="col-12 col-lg-12 col-md-12 col-xs-12">
         <div class="wp--tg-title">
             <h2>Хотите заказать? Отправьте нам ссылку товара на наши мессенджеры!</h2>
             <div class="wp--telegram-button">
