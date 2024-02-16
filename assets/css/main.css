@@ -308,16 +308,21 @@ button {
 }
 
 .footer {
-  background-color: #182352;
+  border-top: 1px solid #182352;
+  background-color: #fff;
 }
 
 .footer-features {
-  padding: 55px;
+  padding: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
+}
+.footer-features .logo img {
+  width: 100%;
+  height: 40%;
 }
 
 .footer-navbar ul {
@@ -325,32 +330,13 @@ button {
 }
 .footer-navbar ul li {
   padding: 15px;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 700;
   align-items: center;
   font-family: "Quicksand", sans-serif;
 }
 .footer-navbar ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-.social-media ul {
-  display: flex;
-}
-.social-media ul li {
-  padding: 12px;
-  font-size: 15px;
-  font-weight: 700;
-  align-items: center;
-  font-family: "Quicksand", sans-serif;
-  border: 1px solid white;
-  border-radius: 50%;
-  padding: 8px;
-  margin-left: 5px;
-}
-.social-media ul li a {
-  color: white;
+  color: #182352;
   text-decoration: none;
 }
 
@@ -463,9 +449,6 @@ button {
   font-size: 18px;
   cursor: pointer;
 }
-.navbar-mobile .nav-menu li img {
-  width: 100% !important;
-}
 
 .hamburger {
   display: none;
@@ -490,7 +473,7 @@ button {
     text-align: center;
   }
   .nav-menu li img {
-    width: 100%;
+    width: 50%;
     height: 20%;
   }
   .header-futures {
@@ -876,6 +859,13 @@ button {
     justify-content: center;
     flex-wrap: nowrap;
   }
+  .discover--shop-title h2 {
+    font-size: 70px !important;
+    font-weight: 600;
+  }
+  .discover--shop-description p {
+    font-size: 20px;
+  }
   .about-info {
     padding: 20px 0;
   }
@@ -888,6 +878,30 @@ button {
   .categories-title h3 {
     font-size: 2.5em;
     font-weight: 500;
+  }
+}
+@media screen and (max-width: 768px) {
+  .discover--shop-title h2 {
+    font-size: 45px !important;
+    font-weight: 600 !important;
+  }
+  .discover--shop-description p {
+    font-size: 16px !important;
+  }
+  .discover-title .discover--shop-button button {
+    font-size: 16px !important;
+  }
+}
+@media screen and (max-width: 568px) {
+  .discover--shop-title h2 {
+    font-size: 35px !important;
+    font-weight: 600 !important;
+  }
+  .discover--shop-description p {
+    font-size: 16px !important;
+  }
+  .discover-title .discover--shop-button button {
+    font-size: 14px !important;
   }
 }
 .contact {
