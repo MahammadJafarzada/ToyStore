@@ -1035,6 +1035,7 @@ button {
 }
 #shop {
   background-color: #f5f6f7;
+  padding-bottom: 40px;
 }
 
 .shop-title {
@@ -1051,6 +1052,8 @@ button {
 }
 
 .shop-filter {
+  position: sticky;
+  top: 10px;
   height: -moz-fit-content;
   height: fit-content;
   padding: 30px 22px;
@@ -1190,6 +1193,7 @@ input[type=range]::-moz-range-thumb {
   transition: all 0.8s;
 }
 .range-button button:hover {
+  outline: 2px dashed #12AEE0;
   opacity: 0.8;
   background-color: white;
   color: #12AEE0;
