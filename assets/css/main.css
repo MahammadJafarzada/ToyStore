@@ -882,7 +882,7 @@ button {
 }
 @media screen and (max-width: 768px) {
   .discover--shop-title h2 {
-    font-size: 45px !important;
+    font-size: 55px !important;
     font-weight: 600 !important;
   }
   .discover--shop-description p {
@@ -894,11 +894,11 @@ button {
 }
 @media screen and (max-width: 568px) {
   .discover--shop-title h2 {
-    font-size: 35px !important;
+    font-size: 50px !important;
     font-weight: 600 !important;
   }
   .discover--shop-description p {
-    font-size: 16px !important;
+    font-size: 18px !important;
   }
   .discover-title .discover--shop-button button {
     font-size: 14px !important;
@@ -1212,6 +1212,7 @@ input[type=range]::-moz-range-thumb {
   }
   .shop-filter {
     text-align: center;
+    position: relative;
   }
   .d-flex {
     justify-content: center;
