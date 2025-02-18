@@ -1,41 +1,52 @@
-const rangeInput = document.querySelectorAll(".range-input input"),
-  priceInput = document.querySelectorAll(".price-input input"),
-  range = document.querySelector(".slider .progress");
-let priceGap = 100;
+document.addEventListener("DOMContentLoaded", function () {
+  const minPriceInput = document.querySelector(".input-min");
+  const maxPriceInput = document.querySelector(".input-max");
+  const rangeMin = document.querySelector(".range-min");
+  const rangeMax = document.querySelector(".range-max");
+  const progress = document.querySelector(".progress");
+  const filterButton = document.querySelector(".range-button button");
+  const products = document.querySelectorAll(".product");
 
-priceInput.forEach((input) => {
-  input.addEventListener("input", (e) => {
-    let minPrice = parseInt(priceInput[0].value),
-      maxPrice = parseInt(priceInput[1].value);
+  function filterProducts() {
+      let minPrice = parseInt(minPriceInput.value);
+      let maxPrice = parseInt(maxPriceInput.value);
 
-    if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].max) {
-      if (e.target.className === "input-min") {
-        rangeInput[0].value = minPrice;
-        range.style.left = (minPrice / rangeInput[0].max) * 100 + "%";
-      } else {
-        rangeInput[1].value = maxPrice;
-        range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
-      }
-    }
+      products.forEach(product => {
+          let productPrice = parseInt(product.querySelector(".my-card-price span").textContent);
+          if (productPrice >= minPrice && productPrice <= maxPrice) {
+              product.style.display = "block";
+          } else {
+              product.style.display = "none";
+          }
+      });
+  }
+
+  function updateRangeInputs() {
+      minPriceInput.value = rangeMin.value;
+      maxPriceInput.value = rangeMax.value;
+      progress.style.left = ((rangeMin.value / rangeMax.max) * 100) + "%";
+      progress.style.right = 100 - (rangeMax.value / rangeMax.max) * 100 + "%";
+  }
+
+  minPriceInput.addEventListener("input", () => {
+      rangeMin.value = minPriceInput.value;
+      updateRangeInputs();
   });
-});
 
-rangeInput.forEach((input) => {
-  input.addEventListener("input", (e) => {
-    let minVal = parseInt(rangeInput[0].value),
-      maxVal = parseInt(rangeInput[1].value);
-
-    if (maxVal - minVal < priceGap) {
-      if (e.target.className === "range-min") {
-        rangeInput[0].value = maxVal - priceGap;
-      } else {
-        rangeInput[1].value = minVal + priceGap;
-      }
-    } else {
-      priceInput[0].value = minVal;
-      priceInput[1].value = maxVal;
-      range.style.left = (minVal / rangeInput[0].max) * 100 + "%";
-      range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
-    }
+  maxPriceInput.addEventListener("input", () => {
+      rangeMax.value = maxPriceInput.value;
+      updateRangeInputs();
   });
+
+  rangeMin.addEventListener("input", () => {
+      minPriceInput.value = rangeMin.value;
+      updateRangeInputs();
+  });
+
+  rangeMax.addEventListener("input", () => {
+      maxPriceInput.value = rangeMax.value;
+      updateRangeInputs();
+  });
+
+  filterButton.addEventListener("click", filterProducts);
 });
